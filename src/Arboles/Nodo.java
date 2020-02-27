@@ -1,8 +1,9 @@
+package Arboles;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Nodo {
-
     String valor;
     List<Nodo> noditos;
 
@@ -11,7 +12,7 @@ public class Nodo {
         this.valor=valor;
     }
 
-     void agregarHijo(Nodo n){
+    void agregarHijo(Nodo n){
         noditos.add(n);
     }
 }
