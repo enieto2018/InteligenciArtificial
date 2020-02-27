@@ -29,6 +29,7 @@ public class main {
         while(colaAux.size()!=0){
             nodoGrafo getNode =colaAux.poll();
             System.out.println(getNode.valor);
+            getNode.estado=true;
             if(getNode.valor.equals(valor)){
                 System.out.println("nodoGrafo Encontrado: "+getNode.valor);
                 return true;
@@ -36,7 +37,7 @@ public class main {
             else
             {
                 for (nodoGrafo n: getNode.noditos) {
-                    if()
+                    if(getNode.estado=true)
                     colaAux.add(n);
                 }
             }
