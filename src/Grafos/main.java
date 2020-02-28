@@ -53,8 +53,8 @@ public class main {
         G.agregarHijo(A);
         G.agregarHijo(Z);
 
-        busquedaXAnchura("G",S);
-        //busquedaXProfundidad("A",E);
+        //busquedaXAnchura("G",S);
+        busquedaXProfundidad("G",S);
     }
 
 
@@ -84,12 +84,14 @@ public class main {
 
     public static boolean busquedaXProfundidad(String valor, nodoGrafo raiz){
         nodoGrafo getNode = raiz;
+        getNode.estado=true;
         System.out.println(getNode.valor);
         if (getNode.valor.equals(valor)){
             System.out.println("Encontrado: "+getNode.valor);
             return true;
         }else{
             for (nodoGrafo n: getNode.noditos) {
+                if(n.estado==false)
                 busquedaXProfundidad(valor,n);
             }
         }
